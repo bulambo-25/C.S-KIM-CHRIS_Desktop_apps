@@ -17,7 +17,13 @@
     <artifactId>activation</artifactId>
     <version>1.1.1</version>
 </dependency>
-
+<!-- https://mvnrepository.com/artifact/co.fingerprintsoft/notification-bulksms -->
+<dependency>
+    <groupId>co.fingerprintsoft</groupId>
+    <artifactId>notification-bulksms</artifactId>
+    <version>1.2.1</version>
+    <scope>provided</scope>
+     </dependency>
       <dependency>
         <groupId>org.apache.derby</groupId>
         <artifactId>derbyclient</artifactId>
