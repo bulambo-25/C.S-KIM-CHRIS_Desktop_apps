@@ -117,7 +117,7 @@ public class CONTENT extends Frame implements ActionListener
         panelSouth = new JPanel();
 
         panelCenter = new JPanel();
-        panelCenter.setBackground(Color.BLACK);
+        panelCenter.setBackground(Color.DARK_GRAY);
        
         panelWest = new JPanel();
         panelWest.setBackground(new Color(84, 153, 199));
@@ -261,8 +261,8 @@ public class CONTENT extends Frame implements ActionListener
         btnSchedule.setForeground(Color.BLUE);
 
         btnCriminal = new JButton("Mark");
-        btnCriminal.setBackground(Color.WHITE);
-        btnCriminal.setForeground(Color.BLUE);
+        btnCriminal.setBackground(Color.GREEN);
+        btnCriminal.setForeground(Color.GREEN);
 
 
         btnJailCell = new JButton("Exams");
@@ -409,7 +409,9 @@ public void qes()
           
       
     }
-
+public static void main(String[] args) {
+        new CONTENT().SUBB();
+    }
 }
     
 
