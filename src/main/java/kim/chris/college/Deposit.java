@@ -526,21 +526,7 @@ public class Deposit extends Frame implements ActionListener
     }
 @Override
    
-public void SMS()
-{
-     try{
-         SMS sns = new SMS();
-         sns.SendSMS("jrdray","Dray@123", " Congratulations Your registration has been recorded. "
-                 + "Our Admissions has sent you\n" +fetchedPassword
-                                 +"  has Your student number. Looking forward to seeing you!", cboGender, "http://bulksms.2way.co.za/eapi/submission/send_sms/2/2.0");
-     
-        }catch(Exception e)
-        {
-            System.out.println(""+e.getMessage());
-        }
-    
-    }
-}
+
       public void actionPerformed(ActionEvent e) {
 
         if (e.getSource() ==btnSearch )
