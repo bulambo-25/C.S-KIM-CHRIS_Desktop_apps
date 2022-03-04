@@ -117,7 +117,7 @@ public class CONTENT extends Frame implements ActionListener
         panelSouth = new JPanel();
 
         panelCenter = new JPanel();
-        panelCenter.setBackground(Color.DARK_GRAY);
+        panelCenter.setBackground(new Color(84, 153, 199));
        
         panelWest = new JPanel();
         panelWest.setBackground(new Color(84, 153, 199));
@@ -249,25 +249,24 @@ public class CONTENT extends Frame implements ActionListener
         btnForgot.setBackground(new Color(204, 204, 255));
 
         btnInventory = new JButton("Time table");
-        btnInventory.setBackground(new Color(204, 204, 255));
-        btnInventory.setForeground(Color.BLUE);
+        btnInventory.setBackground(Color.WHITE);
+        
 
         btnPersonnel = new JButton("Announcement");
-        btnPersonnel.setBackground(Color.BLUE);
-        btnPersonnel.setForeground(Color.BLUE);
+        btnPersonnel.setBackground(Color.WHITE);
+       
 
         btnSchedule = new JButton("Back");
-        btnSchedule.setBackground(Color.BLUE);
-        btnSchedule.setForeground(Color.BLUE);
+        btnSchedule.setBackground(Color.WHITE);
+      
 
         btnCriminal = new JButton("Mark");
-        btnCriminal.setBackground(Color.GREEN);
-        btnCriminal.setForeground(Color.GREEN);
+        btnCriminal.setBackground(Color.WHITE);
 
 
         btnJailCell = new JButton("Exams");
         btnJailCell.setBackground(Color.WHITE);
-        btnJailCell.setForeground(Color.blue);
+        
         btnSearchv= new JButton("Test Result");
         btnSearchv.setBackground(Color.WHITE);
         
@@ -305,23 +304,23 @@ public void SUBB()
         lblCompanyName.setHorizontalAlignment(JLabel.CENTER);
 
         panelCenter.add(btnInventory);
-        btnInventory.setForeground( Color.WHITE);
+        btnInventory.setForeground( Color.BLUE);
         btnInventory.setBackground(new Color(84, 153, 199));
         panelCenter.add(btnCriminal);
-        btnCriminal.setForeground( Color.WHITE);
+        btnCriminal.setForeground( Color.BLUE);
         btnCriminal.setBackground(new Color(84, 153, 199));
         panelCenter.add(btnJailCell);
-        btnJailCell.setForeground( Color.WHITE);
+        btnJailCell.setForeground( Color.BLUE);
         btnJailCell.setBackground(new Color(84, 153, 199));
         panelCenter.add(btnPersonnel);
-        btnPersonnel.setForeground( Color.WHITE);
+        btnPersonnel.setForeground( Color.BLUE);
         btnPersonnel.setBackground(new Color(84, 153, 199));
         panelCenter.add(btnSearchv);
-        btnSearchv.setForeground( Color.WHITE);
+        btnSearchv.setForeground( Color.BLUE);
         btnSearchv.setBackground(new Color(84, 153, 199));
         panelCenter.add(btnBack); 
         btnBack.setBackground(new Color(84, 153, 199));
-        btnBack.setForeground( Color.WHITE);
+        btnBack.setForeground( Color.BLUE);
         main.addWindowListener(new WindowAdapter() {
             @Override
             public void windowClosing(WindowEvent e) {
@@ -409,9 +408,7 @@ public void qes()
           
       
     }
-public static void main(String[] args) {
-        new CONTENT().SUBB();
-    }
+
 }
     
 
