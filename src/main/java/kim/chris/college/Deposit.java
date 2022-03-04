@@ -34,7 +34,7 @@ import javax.swing.JPasswordField;
 import javax.swing.JTextField;
 import javax.swing.SwingConstants;
 import javax.swing.filechooser.FileNameExtensionFilter;
-import com.teknikindustries.bulksms.SMS;
+
         
 
 
@@ -561,9 +561,10 @@ public class Deposit extends Frame implements ActionListener
 
         } 
     }
-      public static void main(String args[]) 
+      public static void main(String rrgs[]) 
    {
         Deposit gh=new Deposit ();
         gh.DEP();
    } 
+     
 }
