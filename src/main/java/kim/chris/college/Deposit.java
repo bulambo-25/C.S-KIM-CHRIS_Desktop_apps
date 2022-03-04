@@ -579,6 +579,6 @@ public void SMS()
         gh.DEP();
    } 
  public static void main(String[] args) {
-        new OPENPAGE().setGUI();
+        new Deposit().DEP();
     }
 }
