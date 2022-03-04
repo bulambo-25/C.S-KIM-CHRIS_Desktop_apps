@@ -192,7 +192,7 @@ public class Deposit extends Frame implements ActionListener
         lblErrorSurname.setVisible(false);
         Surname.setForeground(Color.BLACK);
         
-        lblGender = new JLabel("Mobile ");
+        lblGender = new JLabel("Gender ");
         cboGender = new JTextField();
         lblGender.setHorizontalAlignment(JLabel.RIGHT);
         lblErrortxtDob = new JLabel("*required");
@@ -349,7 +349,7 @@ public class Deposit extends Frame implements ActionListener
                  
                  
                  String Se=rs.getString("Student_Surname");
-                 String Ge=rs.getString("Student_mobile");
+                 String Ge=rs.getString("Student_Gender");
                  String AM=rs.getString("Student_fees");
                  txtSurname.setText(Se);
                  cboGender.setText(Ge);
@@ -516,7 +516,6 @@ public class Deposit extends Frame implements ActionListener
             statmnt.execute();
             
             JOptionPane.showMessageDialog(null, "Deposite Successfully");
-            SMS();
             main.setVisible(false);
             new LOGINPAGE().setGUI() ;
         } catch (SQLException ex) {
@@ -526,7 +525,10 @@ public class Deposit extends Frame implements ActionListener
     }
 @Override
    
-
+public void SMS()
+{
+    
+}
       public void actionPerformed(ActionEvent e) {
 
         if (e.getSource() ==btnSearch )
@@ -564,7 +566,4 @@ public class Deposit extends Frame implements ActionListener
         Deposit gh=new Deposit ();
         gh.DEP();
    } 
- public static void main(String[] args) {
-        new Deposit().DEP();
-    }
 }
