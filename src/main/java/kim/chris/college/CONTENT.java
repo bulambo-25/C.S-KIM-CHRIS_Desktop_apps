@@ -249,24 +249,25 @@ public class CONTENT extends Frame implements ActionListener
         btnForgot.setBackground(new Color(204, 204, 255));
 
         btnInventory = new JButton("Time table");
-        btnInventory.setBackground(Color.WHITE);
-        
+        btnInventory.setBackground(Color.BLUE);
+        btnInventory.setForeground(Color.BLUE);
 
         btnPersonnel = new JButton("Announcement");
-        btnPersonnel.setBackground(Color.WHITE);
-       
+        btnPersonnel.setBackground(Color.BLUE);
+        btnPersonnel.setForeground(Color.BLUE);
 
         btnSchedule = new JButton("Back");
-        btnSchedule.setBackground(Color.WHITE);
-      
+        btnSchedule.setBackground(Color.BLUE);
+        btnSchedule.setForeground(Color.BLUE);
 
         btnCriminal = new JButton("Mark");
         btnCriminal.setBackground(Color.WHITE);
+        btnCriminal.setForeground(Color.BLUE);
 
 
         btnJailCell = new JButton("Exams");
         btnJailCell.setBackground(Color.WHITE);
-        
+        btnJailCell.setForeground(Color.blue);
         btnSearchv= new JButton("Test Result");
         btnSearchv.setBackground(Color.WHITE);
         
