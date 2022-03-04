@@ -525,10 +525,7 @@ public class Deposit extends Frame implements ActionListener
     }
 @Override
    
-public void SMS()
-{
-    
-}
+
       public void actionPerformed(ActionEvent e) {
 
         if (e.getSource() ==btnSearch )
