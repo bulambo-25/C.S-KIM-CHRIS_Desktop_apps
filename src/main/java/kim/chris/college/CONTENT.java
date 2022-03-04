@@ -117,7 +117,7 @@ public class CONTENT extends Frame implements ActionListener
         panelSouth = new JPanel();
 
         panelCenter = new JPanel();
-        panelCenter.setBackground(new Color(84, 153, 199));
+        panelCenter.setBackground(Color.BLACK);
        
         panelWest = new JPanel();
         panelWest.setBackground(new Color(84, 153, 199));
@@ -249,7 +249,7 @@ public class CONTENT extends Frame implements ActionListener
         btnForgot.setBackground(new Color(204, 204, 255));
 
         btnInventory = new JButton("Time table");
-        btnInventory.setBackground(Color.BLUE);
+        btnInventory.setBackground(new Color(204, 204, 255));
         btnInventory.setForeground(Color.BLUE);
 
         btnPersonnel = new JButton("Announcement");
