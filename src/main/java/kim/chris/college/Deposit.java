@@ -1,6 +1,7 @@
 
 package kim.chris.college;
 
+
 import java.awt.*;
 
 import java.awt.event.*;
@@ -525,17 +526,7 @@ public class Deposit extends Frame implements ActionListener
         }
        }         
     }
-   public void SMS()
-   {
-        try{
-         SMS sns = new SMS();
-         sns.SendSMS("draybulambo","Muta@7767", "thank you dray for making so much effort", "27680749987", "http://bulksms.2way.co.za/eapi/submission/send_sms/2/2.0");
-     
-        }catch(Exception e)
-        {
-            System.out.println(""+e.getMessage());
-        }
-   }
+  
 @Override
    
 
