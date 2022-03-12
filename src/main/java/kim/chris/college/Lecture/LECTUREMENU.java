@@ -303,29 +303,29 @@ public void LECT()
         lblCompanyName.setHorizontalAlignment(JLabel.CENTER);
 
         panelCenter.add(btnInventory);
-        btnInventory.setForeground( Color.WHITE);
+        btnInventory.setForeground(new Color(33, 216, 179));
         btnInventory.setBackground(new Color(33, 216, 179));
         panelCenter.add(btnCriminal);
-        btnCriminal.setForeground( Color.WHITE);
+        btnCriminal.setForeground(new Color(33, 216, 179));
         btnCriminal.setBackground(new Color(33, 216, 179));
         panelCenter.add(btnJailCell);
-        btnJailCell.setForeground( Color.WHITE);
+        btnJailCell.setForeground(new Color(33, 216, 179));
         btnJailCell.setBackground(new Color(33, 216, 179));
         panelCenter.add(btnPersonnel);
-        btnPersonnel.setForeground( Color.WHITE);
+        btnPersonnel.setForeground(new Color(33, 216, 179));
         btnPersonnel.setBackground(new Color(33, 216, 179));
         panelCenter.add(btnSearchv);
-        btnSearchv.setForeground( Color.WHITE);
+        btnSearchv.setForeground(new Color(33, 216, 179));
         btnSearchv.setBackground(new Color(33, 216, 179));
         panelCenter.add(btnBack); 
         btnBack.setBackground(new Color(33, 216, 179));
-        btnBack.setForeground( Color.WHITE);
+        btnBack.setForeground(new Color(33, 216, 179));
         panelCenter.add(btnForgot); 
         btnForgot.setBackground(new Color(33, 216, 179));
-        btnForgot.setForeground( Color.WHITE);
+        btnForgot.setForeground(new Color(33, 216, 179));
         panelCenter.add(Surname); 
         Surname.setBackground(new Color(33, 216, 179));
-        Surname.setForeground( Color.WHITE);
+        Surname.setForeground(new Color(33, 216, 179));
         main.addWindowListener(new WindowAdapter() {
             @Override
             public void windowClosing(WindowEvent e) {
@@ -359,7 +359,7 @@ public void LECT()
      if (e.getSource() == btnJailCell)
         {
             main.setVisible(false);
-              new CreateExams().SETGUI();
+           new CreateExams().SETGUI();
           
         }
      if (e.getSource() == btnPersonnel)

@@ -230,6 +230,26 @@ private void Pictures() {
                 ex.printStackTrace();
             }
 }
+private void PiHoto() {
+            System.out.println("DB");
+            String Courses= "CREATE TABLE PITRESS ("
+
+                    + "STUDENTNUMDER VARCHAR(255), PICT blob )";
+            
+            try{
+                System.out.println(" about to get the connection.......");
+                
+                con=connectDB();
+                System.out.println("connection  Establishi...............");
+                statement=con.prepareStatement(Courses);
+                System.out.println("Table Created...............");
+                statement.execute();
+                System.out.println("Executing Sucessfully...............");
+            }
+            catch (SQLException ex) {
+                ex.printStackTrace();
+            }
+}
  public  void TIMETABLEEFIRSTYERA() {
             System.out.println("DB");
             String Courses= "CREATE TABLE APP.FIRSTYEAR ("
@@ -644,7 +664,7 @@ private void Pictures() {
         try {
             String url = "jdbc:derby://localhost:1527/KIM-CHRIS";
            String username = "KIM";
-        String password = "CHRIS";
+          String password = "CHRIS";
             con = DriverManager.getConnection(url, username, password);
            //StudentNumber,  Courses  , Question , StudentAnswer , LectureAnswer, Marks 
             int row = 0;
@@ -668,6 +688,33 @@ private void Pictures() {
         }
 
     }
+  
+  
+  public Time InsertTIMESECond(Time time) throws SQLException
+{
+   String MESS= "INSERT INTO APP.SECONDYEAR(firstyear, Math, dateMath , Physic,PhysicDate,Marketing,MarkingDate ) " + " VALUES (?,?,?,?,?,?,?)";
+   con=connectDB();
+   System.out.println("connection successful");
+        statement = con.prepareStatement(MESS); 
+        statement.setString(1, time.getYear());
+        statement.setString(2, time.getProgram());
+        statement.setString(3, time.getDateofProgram());
+        statement.setString(4, time.getProgram2());
+        statement.setString(5, time.getDateofProgram2());
+        statement.setString(6, time.getProgram3());
+        statement.setString(7, time.getDateofProgram3());
+        
+        int rowINserted = statement.executeUpdate();
+        if (rowINserted > 0) {
+            System.out.println("insertion successfull");
+          
+            
+            
+        }
+        statement.close();
+    
+    return time;
+}
 public void UpdateEXZ(StudentAnswer house) throws ClassNotFoundException {
 
         try {
@@ -910,11 +957,14 @@ public Attendance InsertAttedance(Attendance Attend) throws SQLException
        //bd.COUR();
        // bd. Pictures();
        //  bd.ACCOUNTB();
-      // bd.BANKDatabase();
+       // bd.BANKDatabase();
        //bd.BA();
        //bd.Attendance();
        //bd.Courses() ;
-       bd.LECTURE();
+     // bd. TRUE();
+       //bd.LECTURE();
+       
+       bd.PiHoto();
     }
     
 }

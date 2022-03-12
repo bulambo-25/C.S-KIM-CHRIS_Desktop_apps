@@ -35,7 +35,7 @@ public class ANNOUNCEMENT extends Frame implements ActionListener{
     
       
     private JFrame main;
-    private JPanel panelNorth,panelCenter,panelSouth,panelWest,panen;
+    private JPanel panelNorth,Sud,panelCenter,panelSouth,panelWest,panen;
     
     private JLabel lblPicture;
     
@@ -49,7 +49,7 @@ public class ANNOUNCEMENT extends Frame implements ActionListener{
     private JButton btnCriminal;
     private JButton btnJailCell;
 
-    private JLabel lblCompanyName;
+    public JLabel lblCompanyName;
     
     private JLabel lblProfile;
     
@@ -115,7 +115,7 @@ public class ANNOUNCEMENT extends Frame implements ActionListener{
 
         panelCenter = new JPanel();
         panelCenter.setBackground(Color.WHITE);
-       
+        Sud= new JPanel();
         panelWest = new JPanel();
         panelWest.setBackground(new Color(84, 153, 199));
 
@@ -132,7 +132,7 @@ public class ANNOUNCEMENT extends Frame implements ActionListener{
         lblPicture1.setBackground(Color.green);
         lblCenter= new JLabel();
         
-        lblCompanyName = new JLabel("Announcement     ");
+        lblCompanyName = new JLabel();
         lblCompanyName.setForeground(new Color(84, 153, 199));
         panelBlank1 = new JLabel();
         panelBlank6= new JLabel();
@@ -243,7 +243,7 @@ public class ANNOUNCEMENT extends Frame implements ActionListener{
         btnPersonnel.setBackground(Color.WHITE);
        
 
-        btnSchedule = new JButton("Back");
+        btnSchedule = new JButton("");
         btnSchedule.setBackground(Color.WHITE);
       
 
@@ -251,10 +251,10 @@ public class ANNOUNCEMENT extends Frame implements ActionListener{
         btnCriminal.setBackground(Color.WHITE);
 
 
-        btnJailCell = new JButton("Exams");
+        btnJailCell = new JButton("Back");
         btnJailCell.setBackground(Color.WHITE);
         
-        btnSearchv= new JButton("Test Result");
+        btnSearchv= new JButton("");
         btnSearchv.setBackground(Color.WHITE);
         
 
@@ -271,9 +271,10 @@ public class ANNOUNCEMENT extends Frame implements ActionListener{
         btnPersonnel.addActionListener(this);
     }
     public void ANNOU() 
-{ 
+{       Sud.setLayout(new GridLayout(1, 3));
         panelCenter.setLayout(new GridLayout(3, 1));
         main.add(panelNorth, BorderLayout.NORTH);
+        main.add(Sud, BorderLayout.SOUTH);
         panelSouth.setLayout(new GridLayout(1, 3));
         panelWest.setLayout(new GridLayout(1, 2));
         panen.setLayout(new GridLayout(1, 2));
@@ -283,6 +284,7 @@ public class ANNOUNCEMENT extends Frame implements ActionListener{
         MECLASSES();
         SEARCHTIMECLASSES();
         SES();
+        
         lblPadding03.setHorizontalAlignment(JLabel.LEFT);
         panelNorth.add(lblCompanyName);
         panelWest.add(lblEmail);
@@ -301,6 +303,10 @@ public class ANNOUNCEMENT extends Frame implements ActionListener{
         panen.add(lblPadding07);
         panelCenter.add(panen);
         panelCenter.add(lblPadding8);
+        
+        Sud.add(btnSearchv);
+        Sud.add(btnJailCell );
+        Sud.add(btnSchedule);
         panen.setBackground(new Color(84, 153, 199));
         lblPadding8.setHorizontalAlignment(JLabel.LEFT);
        
@@ -354,7 +360,7 @@ public class ANNOUNCEMENT extends Frame implements ActionListener{
                 }
              else
              {
-                 JOptionPane.showMessageDialog(this, "Enter Correct Surname");
+                 System.out.println("Enter Correct Surname");
              }
                 }
                 catch ( Exception e )
@@ -395,7 +401,7 @@ public class ANNOUNCEMENT extends Frame implements ActionListener{
                 }
              else
              {
-                 JOptionPane.showMessageDialog(this, "Enter Correct Surname");
+                 System.out.println("Enter Correct Surname");
              }
                 }
                 catch ( Exception e )
@@ -455,7 +461,7 @@ public class ANNOUNCEMENT extends Frame implements ActionListener{
                 }
              else
              {
-                 JOptionPane.showMessageDialog(this, "Enter Correct Surname");
+                 System.out.println("Enter Correct Surname");
              }
                 }
                 catch ( Exception e )
@@ -468,13 +474,19 @@ public class ANNOUNCEMENT extends Frame implements ActionListener{
   public void actionPerformed(ActionEvent e) 
   {
 
-       if (e.getSource() == btnBack) 
+       if (e.getSource() == btnJailCell) 
         {
             main.setVisible(false);
-             new CONTENT().SUBB() ;
+            // new CONTENT().SUBB() ;
+             CONTENT jj= new CONTENT();
+              
+            jj.SurnameE.setText(lblCompanyName .getText());
+            jj.SUBB();
+             
         }
           
-      
+       
+          
     }
 
     

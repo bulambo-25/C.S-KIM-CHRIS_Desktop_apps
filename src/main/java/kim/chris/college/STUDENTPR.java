@@ -79,7 +79,7 @@ public class STUDENTPR extends Frame implements ActionListener{
     private JLabel lblErrorEmail;
     private JLabel ErrorEmail;
     
-    private JLabel Surname;
+    public JLabel Surname;
     private JLabel txtSurname;
     private JLabel lblErrorSurname;
     
@@ -407,7 +407,7 @@ public void profil() throws SQLException
  public void qes()
     {
         CONTENT y= new CONTENT();
-         y.Surname.setText(lblNUmber.getText());
+         y.SurnameE.setText(lblNUmber.getText());
          y.SUBB();
     }
 public void search()
@@ -575,11 +575,11 @@ public void update()
           
         } 
     }
-public static void main(String[] args) {
-        try {
-            new STUDENTPR().profil();
-        } catch (SQLException ex) {
-            Logger.getLogger(STUDENTPR.class.getName()).log(Level.SEVERE, null, ex);
-        }
-    }
+//public static void main(String[] args) {
+  //      try {
+       //     new STUDENTPR().profil();
+      //  } catch (SQLException ex) {
+      //      Logger.getLogger(STUDENTPR.class.getName()).log(Level.SEVERE, null, ex);
+       // }
+  //  }
 }

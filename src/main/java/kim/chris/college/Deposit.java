@@ -76,7 +76,7 @@ public class Deposit extends Frame implements ActionListener
     private JLabel lblErrorAdress;
     
     private JLabel lblGender;
-    private JTextField cboGender;
+    public  JTextField cboGender;
     private JLabel lblErrortxtDob;
     
     private JLabel lblAmount;
@@ -195,7 +195,7 @@ public class Deposit extends Frame implements ActionListener
         lblErrorSurname.setVisible(false);
         Surname.setForeground(Color.BLACK);
         
-        lblGender = new JLabel("Gender ");
+        lblGender = new JLabel("Mobile ");
         cboGender = new JTextField();
         lblGender.setHorizontalAlignment(JLabel.RIGHT);
         lblErrortxtDob = new JLabel("*required");
@@ -352,7 +352,7 @@ public class Deposit extends Frame implements ActionListener
                  
                  
                  String Se=rs.getString("Student_Surname");
-                 String Ge=rs.getString("Student_Gender");
+                 String Ge=rs.getString("Student_mobile");
                  String AM=rs.getString("Student_fees");
                  txtSurname.setText(Se);
                  cboGender.setText(Ge);
@@ -562,10 +562,6 @@ public class Deposit extends Frame implements ActionListener
 
         } 
     }
-      public static void main(String rrgs[]) 
-   {
-        Deposit gh=new Deposit ();
-        gh.DEP();
-   } 
+     
      
 }

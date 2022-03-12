@@ -90,7 +90,7 @@ public class TIMETABLE extends Frame implements ActionListener
     private JLabel Amount;
     private JLabel lAmount;
     
-    private JLabel lblPassword;
+    public JLabel lblPassword;
     private JLabel txtPassword;
     private JLabel lblErrorPassword;
 
@@ -136,6 +136,7 @@ public class TIMETABLE extends Frame implements ActionListener
         lblCenter= new JLabel();
         
         lblCompanyName = new JLabel("CONTENT     ");
+        lblPassword= new JLabel();
         lblCompanyName.setForeground(Color.BLACK);
         panelBlank1 = new JLabel();
         panelBlank6= new JLabel();
@@ -284,6 +285,7 @@ public class TIMETABLE extends Frame implements ActionListener
         //main.add(panelWest, BorderLayout.WEST);
         SEARCHTIMECLASSES();
         MECLASSES();
+        panelNorth.add(lblPassword);
         panelCenter.add(lblPadding04);
         panelCenter.add(lblPadding5);  
         panelCenter.add(lb1Welcome);
@@ -379,7 +381,7 @@ public class TIMETABLE extends Frame implements ActionListener
                 }
              else
              {
-                 JOptionPane.showMessageDialog(this, "Enter Correct Surname");
+                 System.out.print("Correct Surname");
              }
                 }
                 catch ( Exception e )
@@ -438,7 +440,7 @@ public class TIMETABLE extends Frame implements ActionListener
                 }
              else
              {
-                 JOptionPane.showMessageDialog(this, "Enter Correct Surname");
+                  System.out.print("Correct Surname");
              }
                 }
                 catch ( Exception e )
@@ -454,7 +456,10 @@ public class TIMETABLE extends Frame implements ActionListener
        if (e.getSource() == btnBack) 
         {
             main.setVisible(false);
-             new CONTENT().SUBB() ;
+             //new CONTENT().SUBB() ;
+             CONTENT gg=new CONTENT();
+            gg.SurnameE.setText(lblPassword.getText());
+            gg.SUBB();
         }
           
       

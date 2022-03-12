@@ -74,7 +74,7 @@ public class CONTENT extends Frame implements ActionListener
     private JLabel lblErrorEmail;
     private JLabel ErrorEmail;
     
-    public  JLabel Surname;
+    public  JLabel SurnameE;
     private JLabel txtSurname;
     private JLabel lblErrorSurname;
     
@@ -204,12 +204,12 @@ public class CONTENT extends Frame implements ActionListener
         lblNUmber= new JTextField(15);
         
         
-        Surname = new JLabel();
+        SurnameE = new JLabel();
         txtSurname = new JLabel("");
         lblErrorSurname = new JLabel("*required");
         lblErrorSurname.setForeground(Color.red);
         lblErrorSurname.setVisible(false);
-        Surname.setForeground(Color.BLUE);
+        SurnameE.setForeground(Color.BLUE);
         
         lblGender = new JLabel("Gender:  ");
         cboGender = new JLabel();
@@ -272,7 +272,7 @@ public class CONTENT extends Frame implements ActionListener
         
 
         
-        
+        btnCriminal.addActionListener(this);
         btnJailCell.addActionListener(this);
         btnSearchv.addActionListener(this);
         btnLogin.addActionListener(this);
@@ -300,7 +300,7 @@ public void SUBB()
        
        
         panelNorth.add(lblCompanyName);
-        panelNorth.add(Surname);
+        panelNorth.add(SurnameE);
         lblCompanyName.setHorizontalAlignment(JLabel.CENTER);
 
         panelCenter.add(btnInventory);
@@ -335,7 +335,7 @@ public void SUBB()
 public void qes()
     {
         AVExma y= new AVExma();
-       y.ErrSubject.setText(Surname.getText());
+       y.ErrSubject.setText(SurnameE.getText());
          y.SETGUI();
     }
   @Override
@@ -344,14 +344,19 @@ public void qes()
     if (e.getSource() == btnCriminal)
         {
             main.setVisible(false);
-             new EXAMS().EXA() ;
-          
+            
+             EXAMS  ss= new  EXAMS();
+              
+              ss.lblErrorPassword.setText(SurnameE.getText());
+              ss.EXA();
         }
     if (e.getSource() == btnInventory)
         {
             main.setVisible(false);
-             new TIMETABLE().Time() ;
-          
+             //new TIMETABLE().Time() ;
+            TIMETABLE gg=new TIMETABLE();
+            gg.lblPassword.setText(SurnameE.getText());
+            gg.Time();
         }
      if (e.getSource() == btnJailCell)
         {
@@ -377,9 +382,11 @@ public void qes()
             {
                // JOptionPane.showMessageDialog(this, "EXAM SUBMITTED ");
                 main.setVisible(false);
-                new EXAMS().EXA();
+                //new EXAMS().EXA();
+               EXAMS  ss= new  EXAMS();
               
-              
+              ss.lblErrorPassword.setText(SurnameE.getText());
+              ss.EXA();
             }
         } catch (SQLException ex) {
             Logger.getLogger(AVExma.class.getName()).log(Level.SEVERE, null, ex);
@@ -390,19 +397,24 @@ public void qes()
      if (e.getSource() == btnPersonnel)
         {
             main.setVisible(false);
-            new ANNOUNCEMENT().ANNOU();
-            
+           // new ANNOUNCEMENT().ANNOU();
+            ANNOUNCEMENT jj= new ANNOUNCEMENT();
+            jj.lblCompanyName.setText(SurnameE.getText());
+            jj.ANNOU();
           
         }
      if (e.getSource() == btnBack)
         {
+        
         try {
-            main.setVisible(false);
-            new STUDENTPR().profil();
+             main.setVisible(false);
+            //new STUDENTPR().profil();
+            STUDENTPR jj= new STUDENTPR();
+            jj.lblNUmber.setText(SurnameE.getText());
+            jj.profil();
         } catch (SQLException ex) {
             Logger.getLogger(CONTENT.class.getName()).log(Level.SEVERE, null, ex);
         }
-          
         }
      
           

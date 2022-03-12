@@ -389,7 +389,7 @@ public class MESSAGE extends Frame implements ActionListener{
             }
         }
     }
-    public static void main(String[] args) {
-        new MESSAGE ().SendEmail();
-    }
+    //public static void main(String[] args) {
+    //    new MESSAGE ().SendEmail();
+   /// }
 }

@@ -91,7 +91,7 @@ public class EXAMS extends Frame implements ActionListener
     
     private JLabel lblPassword;
     private JPasswordField txtPassword;
-    private JLabel lblErrorPassword;
+    public  JLabel lblErrorPassword;
 
 
     private JFrame MainFrame;
@@ -177,9 +177,8 @@ public class EXAMS extends Frame implements ActionListener
         lblPassword.setIcon(Icon);
         lblPassword.setHorizontalAlignment(JLabel.RIGHT);
         txtPassword= new JPasswordField("Password");
-        lblErrorPassword= new JLabel("*Password must be filled");
-        lblErrorPassword.setForeground(Color.red);
-        lblErrorPassword.setVisible(false);
+        lblErrorPassword= new JLabel();
+        
         
 
         lblPadding0 = new JLabel("");
@@ -287,13 +286,14 @@ public class EXAMS extends Frame implements ActionListener
 public void EXA() 
 { 
         panelCenter.setLayout(new GridLayout(6, 1));
+        panelNorth.setLayout(new GridLayout(1, 1));
         main.add(panelNorth, BorderLayout.NORTH);
         panelSouth.setLayout(new GridLayout(1, 3));
         panelWest.setLayout(new GridLayout(14, 1));
         main.add(panelCenter, BorderLayout.CENTER);
         //main.add(panelSouth, BorderLayout.SOUTH);
         main.add(panelWest, BorderLayout.WEST);
-        
+        panelNorth.add(lblErrorPassword);
         panelSouth.add(lblAdress);
         panelSouth.add(btnBack);
         panelSouth.add(lblPadding01);
@@ -329,12 +329,16 @@ public void BM()
         {
             main.setVisible(false);
             
-           new CONTENT().SUBB() ;
+           CONTENT  ss= new  CONTENT ();
+              
+              ss.SurnameE .setText(lblErrorPassword.getText());
+              ss.SUBB();
+            }
           
         }
      
           
       
-    }
+    
 
 }
