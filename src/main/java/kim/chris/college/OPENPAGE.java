@@ -177,7 +177,60 @@ public void setGUI()
         
  } 
 
-  
+  public void LoadingLogin()
+  {
+       Load i= new Load();
+        
+        mainFrame.setEnabled(false);
+        final Thread thread = new Thread(new Runnable() {
+         public void run() {
+         for (int t = 1; t <= 10; t++) {
+          try {
+                                
+            mainFrame.setEnabled(false);
+            i.setGUII();
+            i.setVisible(true);
+            Thread.sleep(1000);
+            System.out.print(t + " ");
+            } catch (InterruptedException e1) {}
+            }
+            mainFrame.setVisible(false);
+            i.Frame.setVisible(false);
+             new LOGINPAGE().setGUI() ;
+                    }
+                });
+                thread.start();
+            
+            
+      
+  }
+  public void LoadingLoginREGISTER()
+  {
+       Load i= new Load();
+        
+        mainFrame.setEnabled(false);
+        final Thread thread = new Thread(new Runnable() {
+         public void run() {
+         for (int t = 1; t <= 10; t++) {
+          try {
+                                
+            mainFrame.setEnabled(false);
+            i.setGUII();
+            i.setVisible(true);
+            Thread.sleep(1000);
+            System.out.print(t + " ");
+            } catch (InterruptedException e1) {}
+            }
+            mainFrame.setVisible(false);
+            i.Frame.setVisible(false);
+             new REGISTRACTION().setGui();
+                    }
+                });
+                thread.start();
+            
+            
+      
+  }
   
    @Override
       public void actionPerformed(ActionEvent e)
@@ -190,13 +243,12 @@ public void setGUI()
 
         } if (e.getSource() == btnLogin) 
         {
-            mainFrame.setVisible(false);
-            new LOGINPAGE().setGUI() ;
+           
+            LoadingLogin();
         }
         if (e.getActionCommand().equals("REGISTER")) 
         {
-             mainFrame.setVisible(false);
-             new REGISTRACTION().setGui();
+            LoadingLoginREGISTER();
         }
     }
     public static void main(String[] args) {

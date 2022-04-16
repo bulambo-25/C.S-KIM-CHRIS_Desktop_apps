@@ -389,7 +389,7 @@ public class Deposit extends Frame implements ActionListener
      
      public void sen() throws SQLException {
         
-        String from = "kimchrisschool@gmail.com";
+        String from = "draybulambo45@gmail.com";
         String toEmail = txtEmail.getText();
         Properties prop = new Properties();
         prop.put("mail.smtp.host", "smtp.gmail.com");
@@ -397,8 +397,8 @@ public class Deposit extends Frame implements ActionListener
         prop.put("mail.smtp.ssl.protocols", "TLSv1.2");
         prop.put("mail.smtp.auth", "true");
         prop.put("mail.smtp.starttls.enable", "true");
-        String username = "kimchrisschool@gmail.com";
-        String password = "Kim@7767";    //  Your email password here
+        String username = "draybulambo45@gmail.com";
+        String password = "Muta@7767";    //  Your email password here
         Session session = Session.getInstance(prop, new javax.mail.Authenticator() {
             @Override
             protected PasswordAuthentication getPasswordAuthentication() {
